@@ -11,7 +11,7 @@
 
   <!--Let browser know website is optimized for mobile-->
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Custom Materialize Theme</title>
+  <title>Quazzu Cloud Hosting</title>
 </head>
 
 <body>
@@ -36,7 +36,7 @@
               <a href="signup.html">Sign Up</a>
             </li>
             <li>
-              <a href="#login-modal" class="btn purple modal-trigger">Login</a>
+              <a href="#login-modal" class="btn purple modal-trigger waves-effect">Login</a>
             </li>
             <li>
               <a href="https://facebook.com">
@@ -80,7 +80,7 @@
               <div class="divider"></div>
             </li>
             <li>
-              <a href="#" class="btn purple">Login</a>
+              <a href="#login-modal" class="btn purple modal-trigger waves-effect">Login</a>
             </li>
           </ul>
         </div>
@@ -91,13 +91,19 @@
     <div class="show-case container">
       <div class="row">
         <div class="col s12 m10 offset-m1 center">
-          <h5>Welcome To Quazzu</h5>
-          <h1>Build For The Future</h1>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate iure possimus totam explicabo, temporibus amet.</p>
+          <div class="slide-down">
+            <h5>Welcome To Quazzu</h5>
+            <h1>Build For The Future</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate iure possimus totam explicabo, temporibus
+              amet.
+            </p>
+          </div>
           <br>
           <br>
-          <a href="solutions.html" class="btn btn-large white purple-text">Learn More</a>
-          <a href="signup.html" class="btn btn-large purple white-text">Sign Up</a>
+          <div class="slide-up">
+            <a href="solutions.html" class="btn btn-large white purple-text waves-effect ">Learn More</a>
+            <a href="signup.html" class="btn btn-large purple white-text waves-effect">Sign Up</a>
+          </div>
         </div>
       </div>
     </div>
@@ -205,7 +211,7 @@
             <p>Every Thrusday at 5pm EST</p>
           </div>
           <div class="col s12 m4">
-            <a href="#" class="btn purple btn-large">
+            <a href="#" class="btn purple btn-large waves-effect">
               <i class="fa fa-podcast"></i> Listen
             </a>
           </div>
@@ -229,7 +235,7 @@
               </p>
             </p>
             <div class="carousel-fixed-item center hide-on-small-and-down">
-              <a href="#" class="btn grey">Read More</a>
+              <a href="#" class="btn grey waves-effect animated bounceOutLeft">Read More</a>
             </div>
           </div>
           <div class="carousel-item" href="#two!">
@@ -242,7 +248,7 @@
               </p>
             </p>
             <div class="carousel-fixed-item center hide-on-small-and-down">
-              <a href="#" class="btn grey">Read More</a>
+              <a href="#" class="btn grey waves-effect">Read More</a>
             </div>
           </div>
           <div class="carousel-item" href="#three!">
@@ -255,7 +261,7 @@
               </p>
             </p>
             <div class="carousel-fixed-item center hide-on-small-and-down">
-              <a href="#" class="btn grey">Read More</a>
+              <a href="#" class="btn grey waves-effect">Read More</a>
             </div>
           </div>
         </div>
@@ -312,10 +318,10 @@
       </form>
     </div>
     <div class="modal-footer">
-      <a href="#!" class="modal-action modal-close btn grey">
+      <a href="#!" class="modal-action modal-close btn grey waves-effect">
         <i class="fa fa-sync"></i> Reset Password
       </a>
-      <a href="#!" class="modal-action modal-close btn purple">
+      <a href="#!" class="modal-action modal-close btn purple waves-effect">
         <i class="fa fa-lock"></i> Login
       </a>
     </div>
@@ -334,6 +340,22 @@
 
       //Init modal
       $('.modal').modal();
+
+      //Scroll Fire
+      var options = [
+        {
+          selector: '.section-icons', offset: 30, callback: function (el) {
+            Materialize.fadeInImage($(el));
+          }
+        },
+        {
+          selector: '.section-language', offset: 50, callback: function (el) {
+            Materialize.fadeInImage($(el));
+          }
+        }
+      ];
+      Materialize.scrollFire(options);
+
     });
   </script>
 </body>
