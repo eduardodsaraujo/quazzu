@@ -109,7 +109,7 @@ a svg:hover {
 
 .slide-right {
   animation: slideRight 2s both;
-  animation-delay: 2500ms;
+  animation-delay: 2.5s;
 }
 
 @keyframes slideDown {
